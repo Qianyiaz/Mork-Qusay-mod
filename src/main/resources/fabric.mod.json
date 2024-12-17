@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "mork-qusay-mod",
+	"version": "${version}",
+	"name": "Mork Qusay Mod",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mork-qusay-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"qyz.mod.MorkQusayMod"
+		],
+		"client": [
+			"qyz.mod.MorkQusayModClient"
+		],
+		"fabric-datagen": [
+			"qyz.mod.MorkQusayModDataGenerator"
+		]
+	},
+	"mixins": [
+		"mork-qusay-mod.mixins.json",
+		{
+			"config": "mork-qusay-mod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
